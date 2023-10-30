@@ -17,8 +17,7 @@ st.markdown('<p style="text-align: right;">By Aravind Raj Palepu</p>', unsafe_al
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>', unsafe_allow_html=True)
 
 # Load data
-os.chdir(r'c:\Users\Aravind\OneDrive\Documents\sem3\pyProjects\streamlitApp')  
-df = pd.read_csv('ms_mx_my_m3_tsla_df.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/rajaravindp/dreamStream/main/ms_mx_my_m3_tsla_df.csv')
 
 # 3 columns layout
 col1, col2, col3 = st.columns(3)
@@ -36,6 +35,11 @@ drivetrain = st.sidebar.multiselect('Drivetrain', df['dtrain'].unique())
 accident = st.sidebar.multiselect('Accident History', df['accident_history'].unique())
 # Create sidebar for paintjob
 paintjob = st.sidebar.multiselect('PaintJob', df['paintJob'].unique())
+# Createdby
+st.sidebar.markdown('''
+---
+Created by: [Aravind Raj Palepu](https://www.linkedin.com/in/aravindpalepuraj/)'''
+)
 
 # Filter data
 df_filtered = df.copy()
