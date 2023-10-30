@@ -9,7 +9,7 @@ warnings.filterwarnings('ignore')
 
 logo_path = "tsla_logo.png"
 
-st.set_page_config(layout="wide", page_icon=logo_path, page_title="Tesla Used Cars Dashboard")
+st.set_page_config(layout="wide", page_icon=logo_path, page_title="Tesla Used Cars Dashboard", initial_sidebar_state="collapsed")
 # st.set_page_config(layout="wide", page_icon=":bar_chart:", page_title="Tesla Used Cars Dashboard")
 st.title(':bar_chart: Tesla Used Cars Dashboard')
 # Add my name to the top right corner
